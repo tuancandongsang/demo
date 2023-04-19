@@ -1,14 +1,14 @@
 <template>
   <div id="sidebar">
-    <img src="https://images.samsung.com/is/image/samsung/assets/vn/about-us/brand/logo/mo/256_144_4.png?$512_N_PNG$" alt="">
+    <h1>SAM SUNG</h1>
     <OptionSidebar />
   </div>
 </template>
 
 <script>
-import OptionSidebar from './components/optionSidebar.vue';
+import OptionSidebar from "./components/optionSidebar.vue";
 export default {
-  components:{OptionSidebar}
+  components: { OptionSidebar },
 };
 </script>
 
@@ -16,12 +16,17 @@ export default {
 #sidebar {
   width: 200px;
   height: 100%;
-  background-color: #000;
-  img{
+  background-color: #001529;
+  h1 {
     display: block;
+    text-shadow: #fc0 1px 0 10px;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 800;
     width: 100%;
     cursor: pointer;
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
   }
