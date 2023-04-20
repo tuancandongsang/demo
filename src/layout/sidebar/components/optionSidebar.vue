@@ -11,7 +11,13 @@
           <MailOutlined />
         </template>
         <template #title>{{ item.meta.title }}</template>
-        <ItemSidebar :route="item.children" />
+          <a-menu-item
+            v-for="route in item.children"
+            :key="route.name"
+            @click="selectOption(route.name)"
+            >{{ route.meta.title }}</a-menu-item
+          >
+        <!-- <ItemSidebar :route="item.children" /> -->
       </a-sub-menu>
     </a-menu>
   </div>
@@ -29,8 +35,8 @@ export default {
     return {
       selectedKeys: ["/"],
       dataOption: undefined,
-      openKeys: ["/"],
-      preOpenKeys: ["/"],
+      // openKeys: ["/"],
+      // preOpenKeys: ["/"],
     };
   },
   created() {
@@ -49,12 +55,12 @@ export default {
       }
     );
   },
+    methods: {
+    selectOption(route) {
+      this.$router.push({ name: route });
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
-span {
-  color: #fff;
-  font-size: 1rem;
-  text-shadow: #fc0 1px 0 10px;
-}
 </style>

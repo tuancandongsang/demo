@@ -1,5 +1,5 @@
 <template>
-  <h1>system-config</h1>
+  <h1>add-config</h1>
 </template>
 
 <script>

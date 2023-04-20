@@ -1,6 +1,7 @@
 <template>
   <div id="sidebar">
     <h1>SAM SUNG</h1>
+    <div class="fold-all"><span>FOLD/EXPAND ALL</span></div>
     <OptionSidebar />
   </div>
 </template>
@@ -28,6 +29,25 @@ export default {
     cursor: pointer;
     &:hover {
       opacity: 0.8;
+    }
+  }
+  .fold-all {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    span {
+      border: 2px solid aliceblue;
+          text-shadow: #fc0 1px 0 10px;
+      border-radius: 50px;
+      color: aliceblue;
+      padding: 8px 12px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
     }
   }
 }

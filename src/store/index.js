@@ -1,12 +1,12 @@
 import { createStore } from 'vuex';
 
-import itemsList from './modules/itemsList';
-import rotate from './modules/rotate';
+import localState from './modules/localState';
+import globalState from './modules/globalState';
 
 const store = createStore({
   modules: {
-    itemsList,
-    rotate,
+    localState,
+    globalState,
   },
 });
 

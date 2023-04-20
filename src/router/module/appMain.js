@@ -46,9 +46,9 @@ export const appMainRouter = [
     path: "/user",
     component: Layout,
     redirect: "/user/user",
-    name: "user",
+    name: "USER",
     meta: {
-      title: "USER",
+      title: "User",
       icon: "lock",
     },
     children: [
@@ -57,7 +57,7 @@ export const appMainRouter = [
         component: () => import("../../page/user/user.vue"),
         name: "userList",
         meta: {
-          title: "USER",
+          title: "User",
           icon: "lock",
         },
       },

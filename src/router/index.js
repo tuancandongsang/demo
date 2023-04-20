@@ -5,7 +5,7 @@ export const route = [
   ...appMainRouter,
   {
     path: "/login",
-    component: () => import("../page/login/index.vue"),
+    component: () => import("../page/login/login.vue"),
   },
   {
     path: "/:notFound(.*)",
