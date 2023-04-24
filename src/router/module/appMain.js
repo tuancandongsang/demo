@@ -2,22 +2,55 @@ import Layout from "../../layout/index.vue";
 export const appMainRouter = [
   {
     path: "/",
-    redirect: "/monitoring",
+    redirect: "/dashboard",
     component: Layout,
-    name: "",
+    name: "Dashboard",
+    meta: {
+      title: "dashboard",
+      icon: "lock",
+    },
+    children: [
+      {
+        path: "dashboard",
+        component: () => import("../../page/dashboard/dashboard.vue"),
+        name: "dashboard",
+        meta: {
+          title: "dashboard",
+          icon: "dashboard",
+        },
+      },
+    ],
+  },
+  {
+    path: "/monitoring",
+    redirect: "/monitoring/ticket",
+    component: Layout,
+    name: "Monitoring",
     meta: {
       title: "Monitoring",
       icon: "lock",
     },
     children: [
       {
-        path: "monitoring",
-        component: () => import("../../page/monitoring/index.vue"),
-        name: "monitoring",
+        path: "ticket",
+        component: () => import("../../page/monitoring/ticket.vue"),
+        name: "Ticket",
         meta: {
-          title: "Monitoring",
+          title: "Ticket",
           icon: "lock",
         },
+        children: [
+          {
+            path: ":sticket",
+            component: () => import("../../page/monitoring/detailSticket.vue"),
+            name: "detailSticket",
+            props: true,
+            meta: {
+              title: "Detail Ticket",
+              icon: "sticket",
+            },
+          },
+        ],
       },
     ],
   },

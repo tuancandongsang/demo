@@ -55,7 +55,6 @@ export default {
     };
   },
   created() {
-    console.log("this.$route.matched[0]", this.$route.matched);
     this.getBreadcrumb();
     this.$watch(
       () => this.$route,

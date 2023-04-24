@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     changePagePagination(page, pageSize) {
-      console.log(page, pageSize);
+      // console.log(page, pageSize);
     },
   },
 };

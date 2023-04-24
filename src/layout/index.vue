@@ -28,6 +28,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+@import "@/styles/index.scss";
 #layout{
   display: flex;
   // background-color: aqua;
@@ -36,7 +37,9 @@ export default {
   .layout-appmain{
     flex: 1;
     .footer{
-      background-color: dodgerblue;
+      background-color: $bg-footer;
+      height: 70px;
+      width: 100%;
     }
   }
 }

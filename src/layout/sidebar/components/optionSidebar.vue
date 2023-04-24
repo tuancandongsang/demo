@@ -10,12 +10,12 @@
         <template #icon>
           <MailOutlined />
         </template>
-        <template #title>{{ item.meta.title }}</template>
+        <template #title>{{ item.meta?.title }}</template>
           <a-menu-item
             v-for="route in item.children"
             :key="route.name"
             @click="selectOption(route.name)"
-            >{{ route.meta.title }}</a-menu-item
+            >{{ route.meta?.title }}</a-menu-item
           >
         <!-- <ItemSidebar :route="item.children" /> -->
       </a-sub-menu>

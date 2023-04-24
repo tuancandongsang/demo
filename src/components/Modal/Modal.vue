@@ -47,7 +47,6 @@ export default {
       this.visibleComp = true;
     },
     handleOk(e) {
-      console.log(e);
       this.visibleComp = false;
     },
   },

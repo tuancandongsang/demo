@@ -1,5 +1,7 @@
 <template>
-  <h1>monitoring</h1>
+  <div>
+    <h1>dashboard</h1>
+  </div>
 </template>
 
 <script>
