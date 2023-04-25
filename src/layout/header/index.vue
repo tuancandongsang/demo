@@ -83,10 +83,15 @@ export default {
 #header {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 30px -20px;
-  padding: 16px;
+  height: 60px;
   display: flex;
+  padding-left: 20px;
   justify-content: space-between;
-
+  align-items: center;
+  position: fixed;
+  left: 200px;
+  width: calc(100% - 200px);
+  z-index: 1;
   .nav {
     font-size: 1.5rem;
     display: flex;

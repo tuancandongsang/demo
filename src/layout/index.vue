@@ -27,19 +27,18 @@ export default {
 };
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 @import "@/styles/index.scss";
-#layout{
-  display: flex;
-  // background-color: aqua;
-  width: 100%;
-  height: 100%;
-  .layout-appmain{
-    flex: 1;
-    .footer{
+#layout {
+  .layout-appmain {
+    .footer {
       background-color: $bg-footer;
       height: 70px;
-      width: 100%;
+      position: relative;
+      z-index: 1;
+      top: 60px;
+      left: 200px;
+      width: calc(100% - 210px);
     }
   }
 }

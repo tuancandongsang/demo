@@ -2,7 +2,9 @@
   content= "conten_btn" btn_css= "class_btn"
 } -->
 <template>
-  <button :class="btn_css">{{ content }}</button>
+  <div id="button">
+    <button :class="btn_css">{{ content }}</button>
+  </div>
 </template>
 <script>
 export default {
@@ -37,5 +39,11 @@ export default {
 }
 .button_none {
   display: none;
+}
+#button {
+  height: 100%;
+  button {
+    width: 100%;
+  }
 }
 </style>

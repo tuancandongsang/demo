@@ -26,10 +26,18 @@
       </div>
       <div class="main-container">
         <KeepAlive>
-          <component :is="tap" :props="tap"></component>
+          <component :is="tap" :sticket="sticket"></component>
         </KeepAlive>
       </div>
     </div>
+    <Modal
+      :visible="visible"
+      :textOpenModal="textOpenModal"
+      :btn_css="btn_css"
+      ref="modal"
+    >
+      <h1>tuancan</h1>
+    </Modal>
   </div>
 </template>
 
@@ -37,13 +45,17 @@
 import ButtonVue from "../../components/Button/Button.vue";
 import Action from "./components/Action.vue";
 import Infomation from "./components/Infomation.vue";
+import Modal from "../../components/Modal/Modal.vue";
 // import { mapGetters, mapMutations } from "vuex";
 export default {
   props: ["sticket"],
-  components: { ButtonVue, Action, Infomation },
+  components: { ButtonVue, Action, Infomation, Modal },
   data() {
     return {
       tap: "Infomation",
+      visible: false,
+      textOpenModal: "aaaaaaaa",
+      btn_css: "button_none",
     };
   },
   computed: {
@@ -52,7 +64,16 @@ export default {
       return this.tap;
     },
   },
-  mounted() {
+  created() {
+    console.log(this.$route);
+    this.$watch(
+      () => this.$route.params,
+      (toParams, previousParams) => {
+        // react to route changes...
+      }
+    );
+  },
+  updated() {
     // console.log(this.$route)
   },
   methods: {

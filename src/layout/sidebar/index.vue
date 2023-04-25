@@ -18,6 +18,7 @@ export default {
   width: 200px;
   height: 100%;
   background-color: #001529;
+  position: fixed;
   h1 {
     display: block;
     text-shadow: #fc0 1px 0 10px;
@@ -38,7 +39,7 @@ export default {
     margin-bottom: 20px;
     span {
       border: 2px solid aliceblue;
-          text-shadow: #fc0 1px 0 10px;
+      text-shadow: #fc0 1px 0 10px;
       border-radius: 50px;
       color: aliceblue;
       padding: 8px 12px;
